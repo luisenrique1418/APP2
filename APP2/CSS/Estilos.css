@@ -1,0 +1,42 @@
+﻿body {
+    background: #17202A;
+}
+
+#pre{
+    margin-left: 5%;
+}
+
+img{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 7%;
+}
+
+.navbar{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+#texto{
+    margin-left: 15%;
+    margin-top: -20%;
+}
+
+#multimedia{
+    display: block;
+    margin-top: 3%;
+}
+
+video{
+    margin-bottom: 5%;
+    margin-left: 25%;
+}
+
+iframe{
+    margin-left: 25%;
+}
+
+#multimedia h2{
+    margin-left: 25%;
+}
