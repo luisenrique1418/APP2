@@ -158,6 +158,13 @@ div .cuboanimacion {
     }
 }
 
+/* NAV */
+nav{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
 /* VIDEO */
 #multimedia{
     display: block;
@@ -166,13 +173,13 @@ div .cuboanimacion {
 
 video{
     margin-bottom: 5%;
-    margin-left: 25%;
+    margin-left: 27%;
 }
 
 iframe{
-    margin-left: 25%;
+    margin-left: 27%;
 }
 
 #multimedia h2{
-    margin-left: 25%;
+    margin-left: 27%;
 }
