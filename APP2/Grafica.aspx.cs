@@ -21,6 +21,12 @@ namespace APP2
             CreaTablaAlumnos();
             RellenaTablaAlumnos();
             CreaGraficaAlumnos();
+
+            /*if (!IsPostBack)
+            {
+                CmbTipoGrafica.DataSource = Enum.GetNames(typeof(SeriesChartType));
+                CmbTipoGrafica.DataBind();
+            }*/
         }
 
         private void CreaTablaAlumnos()
@@ -75,30 +81,30 @@ namespace APP2
 
         protected void BtnGrafica_Click(object sender, EventArgs e)
         {
-            GraficaDinamica.Visible = true;
-            GraficaDinamica.Titles.Add("Resultados de Unidad III Desarrollo .Net");
-            GraficaDinamica.Series["Prueba"].XValueMember = "nombre";
-            GraficaDinamica.Series["Prueba"].YValueMembers = "calificacion";
+            Alumnos.Visible = true;
+            Alumnos.Titles.Add("Resultados de Unidad III Desarrollo .Net");
+            Alumnos.Series["Prueba"].XValueMember = "nombre";
+            Alumnos.Series["Prueba"].YValueMembers = "calificacion";
 
-            GraficaDinamica.DataSource = TblAlumnos;
-            GraficaDinamica.DataBind();
+            Alumnos.DataSource = TblAlumnos;
+            Alumnos.DataBind();
 
-            GraficaDinamica.Series[0].IsValueShownAsLabel = true;
-            GraficaDinamica.Series[0].Label = "#VALY{N2}";
-            GraficaDinamica.Series[0].LegendText = "#AXISLABEL";
+            Alumnos.Series[0].IsValueShownAsLabel = true;
+            Alumnos.Series[0].Label = "#VALY{N2}";
+            Alumnos.Series[0].LegendText = "#AXISLABEL";
 
-            GraficaDinamica.Legends.Add("Leyenda");
-            GraficaDinamica.Legends[0].Enabled = true;
-            GraficaDinamica.Legends[0].Docking = Docking.Bottom;
-            GraficaDinamica.Legends[0].Alignment = System.Drawing.StringAlignment.Center;
+            Alumnos.Legends.Add("Leyenda");
+            Alumnos.Legends[0].Enabled = true;
+            Alumnos.Legends[0].Docking = Docking.Bottom;
+            Alumnos.Legends[0].Alignment = System.Drawing.StringAlignment.Center;
 
-            GraficaDinamica.Series["Prueba"].ChartTypeName = CmbTipoGrafica.SelectedValue;
-            GraficaDinamica.ChartAreas[0].Area3DStyle.Enable3D = ChkAplicar.Checked;
-            GraficaDinamica.ChartAreas[0].Area3DStyle.Inclination = Convert.ToInt32(ChkAngulo.SelectedValue);
+            /*Alumnos.Series["Prueba"].ChartTypeName = CmbTipoGrafica.SelectedValue;
+            Alumnos.ChartAreas[0].Area3DStyle.Enable3D = ChkAplicar.Checked;
+            Alumnos.ChartAreas[0].Area3DStyle.Inclination = Convert.ToInt32(ChkAngulo.SelectedValue);*/
 
         }
 
-        protected void BtnSaveImg_Click(object sender, EventArgs e)
+        /*protected void BtnSaveImg_Click(object sender, EventArgs e)
         {
             Grafica.SaveImage(Server.MapPath("~/saveimgs/mychart.png"), ChartImageFormat.Jpeg);
         }
@@ -122,6 +128,6 @@ namespace APP2
                 Response.Write(pdfDoc);
                 Response.End();
             }
-        }
+        }*/
     }
 }
