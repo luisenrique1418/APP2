@@ -16,6 +16,7 @@ namespace APP2
 
         /// <summary>
         /// Control Ventas.
+<<<<<<< HEAD
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -25,6 +26,8 @@ namespace APP2
 
         /// <summary>
         /// Control Alumnos.
+=======
+>>>>>>> 701a0920ad65b44266d934457f85a5b23ed799a6
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
