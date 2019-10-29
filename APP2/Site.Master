@@ -10,7 +10,7 @@
     <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
     <link rel="stylesheet" href="CSS/Estilos.css" type="text/css"/>
     <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css"/>
-
+    <link href="CSS/animacion.css" rel="stylesheet" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 
@@ -19,7 +19,8 @@
 <body>
         <form runat="server">
         <div>
-            <img alt="" class="img-fluid" src="img/ITL.png" />
+            <div class="cuboanimacion"> 
+            <img alt="" class="img-fluid" src="img/ITL.png" /></div>
             <asp:Label ID="Label1" runat="server" CssClass="h-75" Text="Instituto Tecnologico de la Laguna"></asp:Label><br />
             <asp:Label ID="Label2" runat="server" CssClass="h-75" Text="Desarrollo Web en .Net"></asp:Label>
             <asp:Label ID="Label3" runat="server" CssClass="h-75" Text="Equipo #7"></asp:Label>
