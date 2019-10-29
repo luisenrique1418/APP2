@@ -24,17 +24,13 @@
     <div id="g2">
         <asp:Chart ID="Alumnos" runat="server">
             <series>
-                <asp:Series Name="Series1" Legend="Legend1">
+                <asp:Series Name="Series1">
                 </asp:Series>
             </series>
             <chartareas>
                 <asp:ChartArea Name="ChartArea1">
                 </asp:ChartArea>
             </chartareas>
-            <Legends>
-                <asp:Legend Name="Legend1">
-                </asp:Legend>
-            </Legends>
         </asp:Chart>
     </div>
 
