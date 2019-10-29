@@ -13,40 +13,31 @@
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+
 </head>
+
 <body>
-        <div id="pre" class="container-fluid">
-            <img src="IMG/ITL.png" />
-            <div id="texto">
-                <p> Instituto Tecnologico de la Laguna </p>
-                <p> Equipo #9 </p>
-            </div>
-        </div>
+        <form runat="server">
+        <div>
+            <img alt="" class="img-fluid" src="img/ITL.png" />
+            <asp:Label ID="Label1" runat="server" CssClass="h-75" Text="Instituto Tecnologico de la Laguna"></asp:Label><br />
+            <asp:Label ID="Label2" runat="server" CssClass="h-75" Text="Desarrollo Web en .Net"></asp:Label>
+            <asp:Label ID="Label3" runat="server" CssClass="h-75" Text="Equipo #7"></asp:Label>
+            
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li><a href="Grafica.aspx"> Grafica </a></li>
+                </ul>
+              </div>
+            </nav>
+
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
         
-        <nav class="navbar navbar-expand-lg navbar-primary bg-light">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
 
-        <footer>
-            <p>&copy; <%: DateTime.Now.Year %> Victor Gonzalez </p>
-        </footer>
+
+        </div>
+    </form>
 </body>
 </html>
