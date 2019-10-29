@@ -20,15 +20,23 @@
         <form runat="server">
         <div>
             <div class="cuboanimacion"> 
-            <img alt="" class="img-fluid" src="img/ITL.png" /></div>
-            <asp:Label ID="Label1" runat="server" CssClass="h-75" Text="Instituto Tecnologico de la Laguna"></asp:Label><br />
-            <asp:Label ID="Label2" runat="server" CssClass="h-75" Text="Desarrollo Web en .Net"></asp:Label>
-            <asp:Label ID="Label3" runat="server" CssClass="h-75" Text="Equipo #7"></asp:Label>
+                <img alt="" class="img-fluid" src="img/ITL.png" />
+            </div>
+            <div class="textoanimacion">
+                <asp:Label ID="Label1" runat="server" CssClass="h-75" Text="Instituto Tecnologico de la Laguna"></asp:Label><br />
+                <asp:Label ID="Label2" runat="server" CssClass="h-75" Text="Desarrollo Web en .Net"></asp:Label>    
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                <asp:Label ID="Label3" runat="server" CssClass="h-75" Text="Equipo #9"></asp:Label>
+            </div>
             
             <nav class="navbar navbar-inverse">
               <div class="container-fluid">
+                 <div class="navbar-header">
+                    <a class="navbar-brand" href="#"> Inicio </a>
+                 </div>
                 <ul class="nav navbar-nav">
                   <li><a href="Grafica.aspx"> Grafica </a></li>
+                  <li><a href="Video.aspx"> Video </a></li>
                 </ul>
               </div>
             </nav>
