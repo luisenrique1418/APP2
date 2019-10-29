@@ -131,6 +131,68 @@ namespace APP2
 
 
         }
+        private void Enviar_Correo()
+        {
+            try
+            {
+                string fileName = "";
+                info i = new info();
+
+                int size = archivo.PostedFile.ContentLength;
+
+                if (size < 7000)
+                {
+                    if (archivo.HasFile)
+                    {
+                        foreach (HttpPostedFile file in archivo.PostedFiles)
+                        {
+                            fileName = Path.GetFileName(file.FileName);
+
+                            string strExtension = Path.GetExtension(fileName);
+                            if ( strExtension == ".pdf" || strExtension == ".jpg")
+                            {
+                                file.SaveAs(Server.MapPath("~/") + fileName);
+                                i.Anexos = new Attachment(file.InputStream, fileName);
+                            }
+                        }
+                    }
+                }
+
+
+                StringBuilder BodyMesage = new StringBuilder();
+
+
+
+                if (i.EnviarMail(fileName.ToString(), "NET-Equipo7-Unidad03-Graficas") == true)
+                {
+                    Response.Write("<script> window.alert('Solicitud entregada con EXITO'); </script>");
+                }
+                else
+                {
+                    Response.Write("<script> window.alert('ERROR: no se ha podido enviar la solicitud'); </script>");
+                    Response.Redirect("/Site.Master");
+                }
+
+            }
+            catch (Exception f)
+            {
+                Response.Write("<script> window.alert(" + f + "); </script>");
+                throw;
+            }
+        }
+
+        protected void BtnEnviar_Click(object sender, EventArgs e)
+        {
+            if (0 != archivo.PostedFile.ContentLength)
+            {
+                Enviar_Correo();
+
+            }
+            else
+            {
+                Response.Write("<script> window.alert('Necesita Agregar el pdf a Enviar'); </script>");
+            }
+        }
 
         /*protected void BtnSaveImg_Click(object sender, EventArgs e)
         {

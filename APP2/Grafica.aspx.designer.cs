@@ -16,7 +16,6 @@ namespace APP2
 
         /// <summary>
         /// Control Ventas.
-<<<<<<< HEAD
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -25,10 +24,7 @@ namespace APP2
         protected global::System.Web.UI.DataVisualization.Charting.Chart Ventas;
 
         /// <summary>
-        /// Control Alumnos.
-=======
->>>>>>> 701a0920ad65b44266d934457f85a5b23ed799a6
-        /// </summary>
+        /// Control Alumnos.        /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
