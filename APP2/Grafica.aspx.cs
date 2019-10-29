@@ -13,9 +13,7 @@ namespace APP2
     public partial class Grafica : System.Web.UI.Page
     {
         DataTable TblAlumnos = new DataTable();
-
         Random random = new Random();
-        int rnd;
 
         protected void Page_Load(object sender, EventArgs e)
         {
