@@ -14,6 +14,9 @@ namespace APP2
     {
         DataTable TblAlumnos = new DataTable();
 
+        Random random = new Random();
+        int rnd;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             CreaGraficaFrutas();
@@ -22,11 +25,6 @@ namespace APP2
             RellenaTablaAlumnos();
             CreaGraficaAlumnos();
 
-            /*if (!IsPostBack)
-            {
-                CmbTipoGrafica.DataSource = Enum.GetNames(typeof(SeriesChartType));
-                CmbTipoGrafica.DataBind();
-            }*/
         }
 
         private void CreaTablaAlumnos()
@@ -40,11 +38,11 @@ namespace APP2
 
         private void RellenaTablaAlumnos()
         {
-            TblAlumnos.Rows.Add(new Object[] { "16130125", "JOSE PEREZ", 100 });
-            TblAlumnos.Rows.Add(new Object[] { "16130126", "ALAN ROBLES", 95 });
-            TblAlumnos.Rows.Add(new Object[] { "16130127", "LAURA RUIZ", 85 });
-            TblAlumnos.Rows.Add(new Object[] { "16130128", "CARMEN RAMIREZ", 97 });
-            TblAlumnos.Rows.Add(new Object[] { "16130129", "ANA LUISA VARGAS", 80 });
+            TblAlumnos.Rows.Add(new Object[] { "16130125", "VICTOR GONZALEZ", random.Next(50, 100) });
+            TblAlumnos.Rows.Add(new Object[] { "16130126", "LUIS GARCIA", random.Next(50, 100) });
+            TblAlumnos.Rows.Add(new Object[] { "16130127", "HUGO ARREOLA", random.Next(50, 100) });
+            TblAlumnos.Rows.Add(new Object[] { "16130128", "ENRIQUE RODRIGUEZ", random.Next(50, 100) });
+            TblAlumnos.Rows.Add(new Object[] { "16130129", "ANGEL SAMANO", random.Next(50, 100) });
         }
 
 
