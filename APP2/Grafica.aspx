@@ -2,7 +2,7 @@
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <form id="form1" runat="server">
+    <div class="container-fluid" id="contenedor">
 
     <div id="g1">
         <asp:Chart ID="Ventas" runat="server">
@@ -33,7 +33,15 @@
             </chartareas>
         </asp:Chart>
     </div>
-
-</form>
+        <div>
+                    <asp:FileUpload ID="archivo" accept=".pdf,.jpg" runat="server" class="btn btn-info"/><br />
+            </div>
+        <div>
+            <asp:Button ID="BtnSavePDF" runat="server" Text="Guardar PDF" OnClick="BtnSavePDF_Click" />
+        </div>
+        <div>
+            <asp:Button ID="BtnEnviar" runat="server" Text="Guardar PDF" OnClick="BtnEnviar_Click" />
+        </div>
+</div>
 
 </asp:Content>

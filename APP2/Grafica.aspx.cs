@@ -7,6 +7,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using PdfWriter = iTextSharp.text.pdf.PdfWriter;
+using PageSize = iTextSharp.text.PageSize;
+using Document = iTextSharp.text.Document;
+using System.Net.Mail;
+using System.Text;
+using System.Windows.Documents;
 
 namespace APP2
 {
@@ -97,6 +106,29 @@ namespace APP2
             /*Alumnos.Series["Prueba"].ChartTypeName = CmbTipoGrafica.SelectedValue;
             Alumnos.ChartAreas[0].Area3DStyle.Enable3D = ChkAplicar.Checked;
             Alumnos.ChartAreas[0].Area3DStyle.Inclination = Convert.ToInt32(ChkAngulo.SelectedValue);*/
+
+        }
+
+        protected void BtnSavePDF_Click(object sender, EventArgs e)
+        {
+            Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+            PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+            pdfDoc.Open();
+            using (MemoryStream stream = new MemoryStream())
+            {
+                Alumnos.SaveImage(stream, ChartImageFormat.Png);
+                iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(stream.GetBuffer());
+                chartImage.ScalePercent(75f);
+                pdfDoc.Add(chartImage);
+                pdfDoc.Close();
+
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-disposition", "attachment;filename=Chart.pdf");
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.Write(pdfDoc);
+                Response.End();
+            }
+
 
         }
 
