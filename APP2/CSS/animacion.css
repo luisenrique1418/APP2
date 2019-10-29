@@ -1,6 +1,7 @@
-﻿div .cuboanimacion {
+﻿/* ANIMACION */ 
+div .cuboanimacion {
     width: 100px;
-    height: 100px;
+    padding: 0.5%;
     position: relative;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
@@ -8,36 +9,177 @@
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    margin-left: 7%;
+    margin-top: 1%;
+}
+
+.cuboanimacion img{
+    width: 100%;
+    margin-left: -0.4%;
 }
 
 @keyframes example {
     0% {
-        background-color: red;
+        background-color: white;
         left: 0px;
-        top: 0px;
     }
 
     25% {
-        background-color: yellow;
+        background-color: linear-gradient(45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 21%, rgba(102,102,102,1) 43%, rgba(71,71,71,1) 68%, rgba(44,44,44,1) 87%, rgba(19,19,19,1) 100%);
         left: 200px;
-        top: 0px;
     }
 
     50% {
-        background-color: blue;
+        background-color: black;
         left: 200px;
-        top: 200px;
     }
 
     75% {
-        background-color: green;
+        background-color: linear-gradient(45deg, rgba(19,19,19,1) 100%, rgba(44,44,44,1) 87%, rgba(71,71,71,1) 68%, rgba(102,102,102,1) 43%, rgba(89,89,89,1) 21%, rgba(76,76,76,1) 0%);
         left: 0px;
-        top: 200px;
     }
 
     100% {
-        background-color: red;
+        background-color: white;
         left: 0px;
-        top: 0px;
     }
+}
+
+.textoanimacion{
+    text-align: center;
+    font-size: 25px;
+    margin-top: -7%;
+}
+
+/* BIENVENIDA ANIMACION */
+#contenedor{
+    margin: 3%;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 50%;
+    width: 80%;
+}
+
+#c1 {
+    margin-left: -35%;
+    width: 30%;
+    padding: 5% 10%;
+    background: #2ECC71;
+    border: 2px solid black;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+    position: relative;
+    animation-name: animacion;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    margin-bottom: 3%;
+}
+
+#c1 h4{
+    margin-left: -10%;
+}
+
+@keyframes animacion{
+    0% {
+        background-color: #2ECC71;
+        border: 2px solid black; 
+        color: white;
+        left: 0%;
+        top: 0%;
+    }
+
+    25%{
+        background-color: white;
+        border: 2px solid #2ECC71;
+        color: black;
+        left: 400px;
+        bottom: 0;
+    } 
+
+    50%{
+        background-color: black;
+        border: 2px solid white;
+        color: #2ECC71;
+        left: 400px;
+    bottom: -200px;
+    }
+
+    75%{
+        background-color: black;
+        border: 2px solid #2ECC71;
+        color: white;
+        left: 0px;
+    bottom: -200px;
+    }
+
+    100%{
+        background-color: #2ECC71;
+        border: 2px solid black;
+        color: white;
+        left: 0px;
+        bottom: 0px;
+    }
+}
+
+#balon img{
+    width: 10%;
+    margin-left: -5%;
+    margin-top: 20%;
+}
+
+#balon{
+    position: relative;
+    animation-name: pelota;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes pelota{
+    0%{
+        left: 0px;
+    }
+
+    25%{
+        left: -500px;
+    }
+
+    50%{
+        left: 500px;
+    }
+
+    75%{
+        left: -500px;
+    }
+
+    100%{
+        left: 0px;
+    }
+}
+
+/* NAV */
+nav{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+/* VIDEO */
+#multimedia{
+    display: block;
+    margin-top: 3%;
+}
+
+video{
+    margin-bottom: 5%;
+    margin-left: 27%;
+}
+
+iframe{
+    margin-left: 27%;
+}
+
+#multimedia h2{
+    margin-left: 27%;
 }
