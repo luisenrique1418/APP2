@@ -59,3 +59,5 @@ C:\Users\vichg\source\repos\APP2\APP2\obj\Debug\APP2.csproj.CoreCompileInputs.ca
 C:\Users\vichg\source\repos\APP2\APP2\obj\Debug\APP2.csproj.CopyComplete
 C:\Users\vichg\source\repos\APP2\APP2\obj\Debug\APP2.dll
 C:\Users\vichg\source\repos\APP2\APP2\obj\Debug\APP2.pdb
+C:\Users\vichg\source\repos\APP2\APP2\bin\itextsharp.dll
+C:\Users\vichg\source\repos\APP2\APP2\bin\itextsharp.xml
