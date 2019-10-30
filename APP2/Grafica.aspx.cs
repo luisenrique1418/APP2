@@ -194,10 +194,12 @@ namespace APP2
             }
         }
 
-        /*protected void BtnSaveImg_Click(object sender, EventArgs e)
+        protected void BtnSaveImg_Click(object sender, EventArgs e)
         {
-            Grafica.SaveImage(Server.MapPath("~/saveimgs/mychart.png"), ChartImageFormat.Jpeg);
+            Alumnos.SaveImage(Server.MapPath("~/IMG/mychart.png"), ChartImageFormat.Jpeg);
         }
+
+        /*
 
         protected void BtnSavePDF_Click(object sender, EventArgs e)
         {

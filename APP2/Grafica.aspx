@@ -40,6 +40,9 @@
             <asp:Button ID="BtnSavePDF" runat="server" Text="Guardar PDF" OnClick="BtnSavePDF_Click" />
         </div>
         <div>
+            <asp:Button ID="BtnSaveImg" runat="server" Text="Guardar Imagen" OnClick="BtnSaveImg_Click" />
+        </div>
+        <div>
             <asp:Button ID="BtnEnviar" runat="server" Text="Enviar Correo" OnClick="BtnEnviar_Click" />
         </div>
 </div>
